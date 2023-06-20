@@ -64,7 +64,7 @@ public class DemoUploadFileController {
                     StandardCopyOption.REPLACE_EXISTING);
 
         }catch (Exception e){
-            System.out.println("Loi " + e.getLocalizedMessage());
+            throw new CustomFileNotFoundException(500,"Khong tim thay file");
         }
 
 
